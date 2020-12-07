@@ -14,6 +14,8 @@
  * limitations under the License.
  *
  */
+#include<stdio.h>
+#include<stdlib.h>
 #include <string.h>
 #include <jni.h>
 
@@ -58,5 +60,6 @@ Java_com_example_helloworld_MainActivity_stringFromJNI( JNIEnv* env, jobject thi
 #define ABI "unknown"
 #endif
 
-    return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI " ABI "." x);
+
+    return (*env)->NewStringUTF(env, 'test'+x);
 }
